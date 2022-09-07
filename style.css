@@ -1,0 +1,48 @@
+body {
+  background-color: #FFDAB9;
+  font-family: "Lucida Sans Unicode", "Lucida     Grande", Sans-Serif;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 40px 0 40px 0;
+}
+button {
+    background-color: #008B8B;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+}
+.titleCalendar{
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  margin: 50px 0 50px 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
+}
+
+td, th {
+      border: 1px solid black;
+      padding: 3px;
+      text-align: center;
+    }
+
+td {
+  background: #FAFAD2;
+}
+th {
+  font-weight: bold;
+  background: #008B8B;
+  color: white;
+  text-shadow: 0 1px 1px #2D2020;
+}
