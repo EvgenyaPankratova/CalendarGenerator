@@ -42,9 +42,41 @@ function createCalendar(elem, year, month) {
   }
 }
 
-function askAndCreateCalendar(){
+function askAndCreateCalendar(){ 
 
-let userYear = prompt("Введите 4 цифры года", 2020)
-let userMonth = prompt("Введите 1 цифру месяца", 1)
-createCalendar(calendar, userYear, userMonth)
+while (true){
+
+  let userYear = prompt("Введите 4 цифры года", 2020)
+  let userMonth = prompt("Введите число месяца", 1)
+  
+ try { //обработка ошибок
+    
+    let userYear = prompt("Введите 4 цифры года", 2020)
+
+    if (userYear === null) throw "'отмена'"; 
+    if(userYear == "") throw "пустое значение";
+    if(isNaN(userYear)) throw "не число";
+    userYear = Number(userYear);
+    if(userYear < 1900) throw "слишком маленькое число года";
+    if(userYear > 2090) throw "слишком большое число года";
+    
+    
+    let userMonth = prompt("Введите число месяца", 1)
+    
+    if (userMonth === null) throw "'отмена'"; 
+    if(userMonth == "") throw "пустое значение";
+    if(isNaN(userMonth)) throw "не число";
+    userMonth = Number(userMonth);
+    if(userMonth < 1) throw "слишком маленькое число месяца";
+    if(userMonth > 12) throw "слишком большое число месяца";
+    
+    
+    createCalendar(calendar, userYear, userMonth) //если нет ошибок, вызываем функцию
+    break;
+  }
+  
+  catch(err) {
+    alert("Вы ввели" + " " + err);
+  }
+
 }
