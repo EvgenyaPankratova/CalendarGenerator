@@ -8,7 +8,10 @@ let getLastDayOfMonth = function (year, month) { //находим последн
 
 function createCalendar(elem, year, month) {
   
-  titleCalendar.textContent = `${month} месяц ${year} г.`
+  let monthArr = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+  
+  titleCalendar.textContent = `${monthArr[month-1]} ${year} г.`
+  
   let table = '<table><tr><th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th>сб</th><th>вс</th></tr><tr></table>';
   calendar.innerHTML = table;
   let tableNode = document.querySelector('table');
