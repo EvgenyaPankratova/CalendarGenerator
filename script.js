@@ -45,15 +45,12 @@ function createCalendar(elem, year, month) {
 function askAndCreateCalendar(){ 
 
 while (true){
-
-  let userYear = prompt("Введите 4 цифры года", 2020)
-  let userMonth = prompt("Введите число месяца", 1)
   
  try { //обработка ошибок
     
     let userYear = prompt("Введите 4 цифры года", 2020)
 
-    if (userYear === null) throw "'отмена'"; 
+    if (userYear === null) break; 
     if(userYear == "") throw "пустое значение";
     if(isNaN(userYear)) throw "не число";
     userYear = Number(userYear);
@@ -63,7 +60,7 @@ while (true){
     
     let userMonth = prompt("Введите число месяца", 1)
     
-    if (userMonth === null) throw "'отмена'"; 
+    if (userMonth === null) break; 
     if(userMonth == "") throw "пустое значение";
     if(isNaN(userMonth)) throw "не число";
     userMonth = Number(userMonth);
